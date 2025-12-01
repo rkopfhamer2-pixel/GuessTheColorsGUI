@@ -5,6 +5,7 @@
  */
 import java.awt.*;
 import javax.swing.*;
+
 import java.awt.event.*;
 
 public class GuessColorsGUI extends JFrame implements ActionListener
@@ -60,6 +61,8 @@ public class GuessColorsGUI extends JFrame implements ActionListener
     panel.add(panelTop, BorderLayout.NORTH);
     panel.add(panelGrid, BorderLayout.CENTER);
     panel.add(panelBottom, BorderLayout.SOUTH);
+    // Set this button as the default button
+    getRootPane().setDefaultButton(guessButton);
     guessButton.addActionListener(this);
     newButton.addActionListener(this);
     quitButton.addActionListener(this);
@@ -200,6 +203,9 @@ public class GuessColorsGUI extends JFrame implements ActionListener
       System.exit(0);
     }  //end of in source ==quitButton
   }
+  
+ 
+  
   
   
    public static void main(String [] args)
